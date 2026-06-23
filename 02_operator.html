@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    {
+      console.log(10 === '10');
+      console.log(10 !== '10');
+
+    }
+
+    //Falsy: false로 취급하는 값(값이 없는 경우)
+    {
+      console.log('Falsy');
+      console.log(0 == false);
+      console.log(undefined == false);
+      console.log(undefined == null); //undefined는 따로 처리, null과 동급
+      console.log('' == false);
+    }
+
+    // 논리 연산(&&, ||)
+    // Short Circuit
+    {
+      let a='';
+      console.log(a || 'hello'); //a에 값이 없으면 hello 사용
+      a = 'nice';
+      console.log(a || 'hello'); //a에 값이 있으면 nice 사용
+    }
+
+    // 널 병합
+    {
+      let a;
+      let b = null;
+      console.log(typeof a, typeof b);
+      console.log(a ?? 'hello'); // a가 nullish하면 'hello' 사용
+      console.log(b ?? 'world'); // b가 nullish하면 'world' 사용
+      
+      a = 10;
+      console.log(a ?? 'hello'); 
+    }
+  </script>
+</body>
+</html>

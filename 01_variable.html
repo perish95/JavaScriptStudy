@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* var 선언 */
+    {
+      var a; // 초기 할당이 없으면 undefined 값을 가짐
+      console.log(a, typeof(a));
+      
+      var a; // 재선언 가능
+      a = 10; //number 타입 값 할당
+      console.log(a, typeof(a));
+
+      a = 'Hello World';
+      console.log(a, typeof(a));
+
+    }
+    console.log(a);
+
+    /* let, const */
+    {
+      let b = 10;
+      const c = true; // 자바의 final
+      b = 'Hello';
+      console.log(b);
+
+      //let b; //재선언 불가
+    }
+    //console.log(b); //let, const는 scop 밖은 적용 안됨
+
+    /* Template Literal */
+    {
+      const age = 10;
+      const a = '나는 ' + age + '살 입니다.';
+      const b = `나는 ${age}살 입니다.`; //expression interpolation
+      console.log(a, b);
+    }
+
+    /* Hoisting */
+    {
+      money = 1000;
+      console.log(money);
+      var money; //JavaScript 인터프리터가 var 선언부를 가장 먼저 읽어 처리합니다.
+
+      console.log(car);
+      var car = 'sonata';
+      console.log(car);
+    }
+  </script>
+</body>
+</html>
